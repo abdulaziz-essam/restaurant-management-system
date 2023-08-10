@@ -41,6 +41,7 @@ class DashboardPage extends StatelessWidget {
             title: 'Orders',
             onTap: () {
               // Action when orders item is tapped
+               Navigator.pushNamed(context, '/orders');
             },
           ),
         ],

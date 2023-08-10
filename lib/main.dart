@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:res_management_system/dashboard/dashboard.dart';
+import 'package:res_management_system/orders/orders.dart' ;
+import 'package:res_management_system/orders/orders_details.dart';
+import './notification/notification.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -17,7 +20,10 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
-        '/profile': (context) => const DashboardPage(),
+        '/dashboard': (context) => const DashboardPage(),
+       '/orders': (context) => const RestaurantOrdersPage(),
+         '/detail': (context) => const RestaurantOrdersPageDetail(),
+         '/notification': (context) => const NotificationPage(),
       },
     );
   }
@@ -61,9 +67,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/profile');
+                Navigator.pushNamed(context, '/dashboard');
               },
-              child: const Text('Go to Profile Page'),
+              child: const Text('Go to Dashboard Page'),
             ),
           ],
         ),
