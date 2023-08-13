@@ -3,6 +3,7 @@ import 'package:res_management_system/dashboard/dashboard.dart';
 import 'package:res_management_system/orders/orders.dart' ;
 import 'package:res_management_system/orders/orders_details.dart';
 import './notification/notification.dart';
+import './profile/profile.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
        '/orders': (context) => const RestaurantOrdersPage(),
          '/detail': (context) => const RestaurantOrdersPageDetail(),
          '/notification': (context) => const NotificationPage(),
+          '/profile': (context) =>  ProfilePage()
       },
     );
   }
