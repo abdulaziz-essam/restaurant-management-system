@@ -28,10 +28,28 @@ class NotificationPage extends StatelessWidget {
           itemCount: notifications.length,
           itemBuilder: (context, index) {
             final notification = notifications[index];
-            return ListTile(
-              title: Text(
-                notification,
-                style: TextStyle(fontSize: 16.0),
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: ListTile(
+                title: Text(
+                  notification,
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                  ),
+                ),
+                leading: Icon(
+                  Icons.notifications,
+                  color: Colors.blue,
+                ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.blue,
+                ),
+                onTap: () {
+                  // Handle notification tap
+                },
               ),
             );
           },
